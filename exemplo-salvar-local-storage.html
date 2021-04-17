@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+	<title>Salvar - LocalStorage</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body class="container text-center bg-info">
+	<h1>Insert - Local Storage</h1>
+	<br>
+	<label for="nomealuno">Nome:</label>
+	<br>
+	<input class="form-group" type="text" name="nomealuno" id="nomealuno">
+	<br>
+	<label for="cpf">CPF: </label>
+	<br>
+	<input class="form-group" type="text" name="cpf" id="cpf">
+	<br>
+	<label for="RG">RG: </label>
+	<br>
+	<input class="form-group" type="text" name="RG" id="RG">
+	<br>
+	<label for="telefone">Telefone: </label>
+	<br>
+	<input class="form-group" type="tel" name="telefone" id="telefone">
+	<br>
+	<label for="cidade">Cidade: </label>
+	<br>
+	<input class="form-group" type="text" name="cidade" id="cidade">
+	<br>
+	<label for="bairro">Bairro: </label>
+	<br>
+	<input class="form-group" type="text" name="bairro" id="bairro">
+	<br><br>
+	<input class="btn-lg btn-dark" type="button" value="SALVAR" onclick="gravar()">
+	<br>
+	<!-- Optional JavaScript -->
+	<script>
+		function gravar(){
+			var nome1 = document.getElementById("nomealuno").value;
+			var cpf1 = document.getElementById("cpf").value;
+			var rg1 = document.getElementById("RG").value;
+			var telefone1 = document.getElementById("telefone").value;
+			var cidade1 = document.getElementById("cidade").value;
+			var bairro1 = document.getElementById("bairro").value;
+			window.localStorage.setItem("Nome", nome1);
+			window.localStorage.setItem("CPF", cpf1);
+			window.localStorage.setItem("RG", rg1);
+			window.localStorage.setItem("Telefone", telefone1);
+			window.localStorage.setItem("Cidade", cidade1);
+			window.localStorage.setItem("Bairro", bairro1);
+		}
+	</script>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
